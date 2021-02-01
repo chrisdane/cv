@@ -1,0 +1,428 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+\usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+\addtolength{\voffset}{-0.5cm}
+%\paperheight=850pt
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+%\usepackage[ngerman]{babel}
+
+\usepackage{array,booktabs,ragged2e}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}} % to set size of left column
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}} % to set size of left column
+
+\usepackage{longtable}
+
+% orcid
+% does not work:
+%\usepackage{orcidlink}
+%\orcidlink{https://orcid.org/0000-0003-2089-733X}
+% works:
+\usepackage{academicons}
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
+%\orcid{0000-0002-4453-1140}
+
+% use font fontawesome for special symbols
+\usepackage{fontspec}
+% must add path where fontawesome is installed
+\defaultfontfeatures{Path=/usr/share/texmf-dist/fonts/opentype/public/fontawesome/}
+\usepackage{fontawesome}
+% github: \faGithub https://github.com/chrisdane
+% stackoverflow: \faStackOverflow https://stackexchange.com/users/6599537/chris
+
+\begin{document}
+
+%\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\par{\centering{\Huge Christopher Danek}\bigskip \qquad \LARGE \orcid{0000-0002-4453-1140} \LARGE \href{https://github.com/chrisdane}{\color{black}\faGithub} \href{https://stackoverflow.com/users/5098273/chris}{\color{black}\faStackOverflow} \par}
+\vspace{0.1cm}
+
+\section{Personal Data}
+\vspace{0.3cm}
+
+\begin{center}
+\begin{tabular}{rl}
+\textsc{Place and Date of Birth:} & Berlin, Germany  | July 31, 1987 \\
+\textsc{Address:} & Geibelstr. 20, 28215 Bremen, Germany \\
+\textsc{Phone:} & +49 151 152 199 63\\
+\textsc{email:} & \href{mailto:cdanek@awi.de}{cdanek@awi.de}
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+\vspace{0.3cm}
+\section{Work Experience}
+\vspace{0.3cm}
+
+%\begin{tabular}{r|p{12cm}}
+\begin{longtable}{R{2.0cm}|p{13cm}}
+
+\textsc{Since 2020} & \textbf{PostDoc} in \textsc{\href{https://geologie.uni-koeln.de/index.php?id=2045}{PLOT} -- Paleolimnological Transect} project at the Alfred Wegener Institute\\
+& \small{Transient Holocene simulations with coupled climate model COSMOS}\\
+& \small{High-resolution stable isotope records from Siberian lake diatoms}\\
+& \small{Head: Dr. Martin Werner \orcid{0000-0002-6473-0243}}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Aug 2019\,\,-- Dec 2019} & \textbf{PostDoc} in \textsc{\href{https://www.palmod.de}{PalMod} -- Paleoclimate Modeling} project at the Alfred Wegener Institute\\
+& \small{Setup, performing, CMORization and maintenance of CMIP6 and PMIP4 experiments with the coupled climate model \href{https://fesom.de/models/awi-esm/}{AWI-ESM}}\\
+& \small{Head: Prof. Dr. Gerrit Lohmann \orcid{0000-0003-2089-733X}}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Mar 2015\,\,-- Jul 2019} & \textbf{PhD} (Dr. rer. nat) at the \textsc{Physics} department of Bremen University and the Alfred Wegener Institute\\ 
+& \small{High-resolution hindcast simulations with global ocean model \href{https://fesom.de/}{FESOM}}\\
+& \small{Small-scale ocean dynamics and energy budgets of North Atlantic and Labrador Sea}\\
+& \small{Thesis: \href{https://media.suub.uni-bremen.de/handle/elib/1694}{Modeling the North Atlantic and Labrador Sea dynamics with the global high-resolution ocean model FESOM}}\\
+& \small{Supervision: Dr. Patrick Scholz \orcid{0000-0003-2692-7624} and Prof. Dr. Gerrit Lohmann \orcid{0000-0003-2089-733X}}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Summer 2015} & \textbf{Teaching} master degree course ``Climate Dynamics II'' of the Postgraduate Programme Environmental Physics, Bremen University\\
+& \small{Head: Prof. Dr. Gerrit Lohmann \orcid{0000-0003-2089-733X}}\\
+\multicolumn{2}{c}{}\\
+
+%\end{tabular}
+\end{longtable}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS 
+%----------------------------------------------------------------------------------------
+\section{Peer-reviewed Publications}
+\vspace{0.3cm}
+
+\begin{longtable}{r|p{14cm}}
+
+\textsc{2021} & \textit{(in prep)} Semmler, T. \orcid{0000-0002-2254-4901}, Goessling, H. \orcid{0000-0001-9018-1383}, Sidorenko, D. \orcid{0000-0001-8579-6068}, Koldunov, N. \orcid{0000-0002-3365-8146},  \textbf{Danek, C.} \orcid{0000-0002-4453-1140} and J. Jungclaus \orcid{0000-0002-3849-4339}: Ocean model formulation influences climate sensitivity.\\
+\rule{0pt}{0.5cm}
+& \textit{(in prep)} \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, Werner, M. \orcid{0000-0002-6473-0243}, Meyer, H. \orcid{0000-0003-4129-4706}, et al.: Modelling hydrological changes along the PLOT transect during the Holocene. \textit{Journal of Quaternary Science}\\
+\rule{0pt}{0.5cm}
+&\textit{(in prep)} \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, Scholz, P. \orcid{0000-0003-2692-7624} and G. Lohmann \orcid{0000-0003-2089-733X}: Decadal variability of turbulence and eddy temperature fluxes in the Labrador Sea. \textit{Geophysical Research Letters}\\
+\rule{0pt}{0.5cm}
+& \textit{(submitted)} Keeble, J., \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, et al.: Evaluating stratospheric ozone and water vapor changes in CMIP6 models from 1850-2100. \textit{Atmospheric Chemistry and Physics}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{2020} & Ackermann, L. \orcid{0000-0001-6643-0714}, \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, Gierz, P. \orcid{0000-0002-4512-087X} and G. Lohmann \orcid{0000-0003-2089-733X}: AMOC Recovery in a Multicentennial Scenario Using a Coupled Atmosphere-Ocean-Ice Sheet Model. \textit{Geophysical Research Letters}, 47, \href{https://doi.org/10.1029/2019GL086810}{https://doi.org/10.1029/2019GL086810}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{2019} & \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, Scholz, P. \orcid{0000-0003-2692-7624} and G. Lohmann \orcid{0000-0003-2089-733X}: Effects of High Resolution and Spinup Time on Modeled North Atlantic Circulation. \textit{Journal of Physical Oceanography}, 49 (5), 1159--1181, \href{https://doi.org/10.1175/JPO-D-18-0141.1}{https://doi.org/10.1175/JPO-D-18-0141.1}\\
+\multicolumn{2}{c}{}\\
+
+\end{longtable}
+ 
+
+\vspace{0.3cm}
+\section{Peer-reviewed Datasets}
+\vspace{0.3cm}
+
+\begin{longtable}{r|p{14cm}}
+
+\textsc{2020} & Shi, X. \orcid{0000-0001-7793-9639}, Yang, H. \orcid{0000-0003-2054-2256}, \textbf{Danek, C.} \orcid{0000-0002-4453-1140} and  G. Lohmann \orcid{0000-0003-2089-733X}: AWI AWI-ESM1.1LR model output prepared for CMIP6 PMIP. Earth System Grid Federation, \href{https://doi.org/10.22033/ESGF/CMIP6.9302}{https://doi.org/10.22033/ESGF/CMIP6.9302}\\
+\rule{0pt}{0.5cm}
+& \textbf{Danek, C.} \orcid{0000-0002-4453-1140}, Shi, X. \orcid{0000-0001-7793-9639}, Stepanek, C. \orcid{0000-0002-3912-6271}, Yang, H. \orcid{0000-0003-2054-2256}, Barbi, D. \orcid{0000-0002-5053-1788},  Hegewald, J. \orcid{0000-0002-3675-0968} and  G. Lohmann \orcid{0000-0003-2089-733X}: AWI AWI-ESM1.1LR model output prepared for CMIP6 CMIP. Earth System Grid Federation, \href{https://doi.org/10.22033/ESGF/CMIP6.9301}{https://doi.org/10.22033/ESGF/CMIP6.9301}\\
+\multicolumn{2}{c}{}\\
+
+\end{longtable}
+ 
+% 
+% \section{Presentations \& Posters}
+% 
+% \begin{tabular}{r|p{13.75cm}}
+% \textsc{2014} & S. \textsc{Bentzien}$^{1,2}$, C.  \textsc{Bollmeyer}$^{1,2}$, C. \textsc{Danek}$^{1,2}$, P.  \textsc{Friederichs}$^{1,2}$, J. D. \textsc{Keller}$^{2,3}$, and C.  \textsc{Ohlwein}$^{1,2}$: \textbf{Evaluating Reanalysis - Independent Observations and Observation Independence.} Presentation at American Geophysical Union's (AGU) Fall Meeting, December 15-19, 2014 in San Francisco, US. 2014. ($^{1}$) University of Bonn, Meteorological Institute, Bonn, Germany, ($^{2}$) Hans Ertel Centre for Weather Research, Climate Monitoring Branch, Bonn, Germany, ($^{3}$) Deutscher Wetterdienst, Offenbach, Germany\\
+% \multicolumn{2}{c}{}\\
+% 
+% %------------------------------------------------
+% 
+% \textsc{2011} & S. \textsc{Wurzler}$^{1}$, P. \textsc{Bruckmann}$^{1}$, C.  \textsc{Danek}$^{1}$, V. \textsc{Diegmann}$^{1}$, F. \textsc{Pfäfflin}$^{1}$, and A.  \textsc{Brandt}$^{1}$: \textbf{Further experience with low emission zones in Germany: will the next stage do the job?.} Poster presented at European Aerosol Conference EAC, September 4-9, 2011 in Manchester, UK. 2011. ($^{1}$) State Agency for Nature, Environment, and Consumer Protection (\textsc{LANUV NRW})\\
+% \multicolumn{2}{c}{}
+% \end{tabular}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS AND ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
+
+% \section{Scholarships and Certificates}
+% 
+% \begin{tabular}{rl}
+% \textsc{Sept.} 2012 & Faculty of Science Masters Scholarship \footnotesize(\$30,000)\normalsize\\
+% 
+% \textsc{June} 2010 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
+% \end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+% SKILLS 
+%----------------------------------------------------------------------------------------
+\section{Methods}
+\vspace{0.3cm}
+
+{\renewcommand{\arraystretch}{1.25}%
+\begin{tabular}{lp{11cm}}
+Geophysical data analysis and visualization in any Unix-like environment or Microsoft using\\
+\qquad \textsf{R}, git \href{https://github.com/chrisdane}{\color{black}\faGithub}, \LaTeX, CDO, NCO, Bash, stackoverflow \href{https://stackoverflow.com/users/5098273/chris}{\color{black}\faStackOverflow}, Inkscape, GIMP, LibreOffice or MS Office,\\
+\qquad Octave or MATLAB, NCL, Python, QGIS or ArcGIS\\
+I worked with various observational/reanalysis data and geophysical models of different institutions:\\
+\qquad \href{https://www.awi.de/en/}{AWI}: \href{https://fesom.de/}{FESOM} -- Finite Element Sea ice--Ocean Model\\
+\qquad \href{https://mpimet.mpg.de/en/homepage}{MPI}: ECHAM, JSBACH, MPI-OM\\
+\qquad \href{https://ncar.ucar.edu/}{NCAR}: \href{https://www.cesm.ucar.edu/models/clm/}{CLM} -- Community Land Model\\
+I prefer open source infrastructure and software if possible and speak\\
+\qquad German (first language), English (fluent) and French (basics) 
+%\textsc{Software}: & Open Office, MS Office, ESRI ArcGIS, GIMP, TSAP-Win Professional, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\%Latex\\%, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}, ESRI ArcGIS, GIMP\\
+\end{tabular}
+}
+
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{0.6cm}
+\section{University}
+\vspace{0.3cm}
+
+\begin{longtable}{R{2cm}|p{13cm}}
+
+\textsc{Oct 2012\,\,-- Dec 2014} & \textbf{Master of Science} in \textsc{Physics of Earth and Atmosphere} at the Geological Sciences department, Bonn University, Germany (\textsc{GPA}: 1.4)\\
+%& 110/110 \small\emph{First Class Honours} | Major: Quantitative Finance\\
+%& Major in Meteorology\\
+& \small{Thesis: Bayesian Formulation of Uncertainty in Paleoclimate Reconstructions - A Tree Ring Width Case Study}\\
+& \small{Grade: 1.0; Supervision: Dr. Burkhard Neuwirth \orcid{0000-0001-7473-462X} and Prof. Dr. Andreas Hense \orcid{0000-0002-9251-146X}}\\
+%&\normalsize \textsc{Gpa}: 8.0/9.0\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
+%&\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Mar 2014\,\,-- Dec 2014} & \textbf{Student assistant} at HErZ -- Hans-Ertel-Centre for Weather Research, Bonn University\\ 
+& \small{Validation of Numerical Weather Prediction model reanalysis data \href{https://reanalysis.meteo.uni-bonn.de/?Download_Data___COSMO-REA2}{COSMO-REA2}}\\
+& \small{Head: Dr. Sabrina Wahl \orcid{0000-0001-9493-9948} and Dr. Jan Keller \orcid{0000-0002-2010-7767}}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Fall} 2013 & \textbf{Exchange Semester} in \textsc{Meteorological Engineering} at the Aeronautics and Astronautics department, \fontfamily{lmr}\selectfont \.{I}stanbul Teknik Üniversitesi (Istanbul Technical University), Turkey\\
+%\textsc{Fall} 2013 & \textbf{Exchange Semester} at Istanbul Teknik Üniversitesi (Istanbul Technical University), Istanbul, Turkey\\
+\multicolumn{2}{c}{} \\
+
+\textsc{Mar 2012\,\,-- Jul 2013} & \textbf{Student assistant} at TR32 -- Transregional Collaborative Research Centre 32, Department of Meteorology, Bonn University\\
+& \small{Work with MODIS remote sensing landuse and CLM model data}\\
+& \small{Head: Dr. Prabhakar Shrestha \orcid{0000-0002-0840-0717} and Prof. Dr. Clemens Simmer \orcid{0000-0003-3001-8642}}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Oct 2008\,\,-- Sep 2012} & \textbf{Bachelor of Science} in \textsc{Physical Geography} at the Department of Geography, Bonn University, Germany (\textsc{GPA}: 2.1)\\
+& \small{Majors in Meteorology \& Geology}\\
+& \small{Thesis: Multi-Modell-Analyse zur Klimaänderung der Nordatlantischen Oszillation im 21. Jahrhundert}\\
+& \small{Grade: 2.0; Supervision: Dr. Roland Pape and Prof. Dr. Andreas Hense \orcid{0000-0002-9251-146X}}\\
+%&\normalsize \ourtextsc{GPA}: 2.1\\%\hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\
+%&\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Feb --\,\,Mar \quad 2011} & \textbf{Internship} at LANUV NRW -- State Agency for Nature, Environment, and Consumer Protection, Essen, Germany\\
+& \small{Planning of low emission zones in German Ruhr area to reduce urban air pollution}\\
+& \small{Head: Dr. Sabine Wurzler}\\
+\multicolumn{2}{c}{}\\
+
+\textsc{Sep 2010\,\,--Feb 2011} & \textbf{Student assistant} in Climatology and Landscape Ecology, Department of Geography, Bonn University\\
+& \small{Field work in mountainous area of Norway, dendrochronological and biogeochemical analysis of dwarf shrubs}\\
+& \small{Head: Dr. Roland Pape and Prof. Dr. Jörg Löffler}\\
+\multicolumn{2}{c}{}\\
+
+\end{longtable}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+%\vspace{0.3cm}
+%\section{Recreation}
+
+%\begin{tabular}{rl}
+%& Sailing\\
+%& Participation in Workcamps, aiming for a sustainable development of the environment\\
+%& Volunteer work in student cafeteria\\
+%\end{tabular}
+
+%----------------------------------------------------------------------------------------
+
+\vfill
+\begin{flushright}
+  Bremen, \today
+\end{flushright}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	GRADE TABLES
+%----------------------------------------------------------------------------------------
+
+% \par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
+% 
+% \begin{center}
+% \begin{tabular}{lcc}
+% \multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+% Corporate Finance (Valuation) & 25 & 6\\
+% Financial Statement Analysis & 28 & 6\\
+% Statistics & 27 & 6\\
+% Theory of Finance & 26 & 6\\
+% Quantitative Methods for Finance & 30 & 6\\
+% Econometrics & 24 & 6\\
+% Derivatives & 31 & 6\\
+% Management of Financial and Insurance Companies & 30 & 6\\
+% Business Law & 31 & 6\\
+% Investment Banking	& 28 & 6\\ \\		
+% Behavioral Models for Economics and Finance	 & 29 & 6\\
+% Numerical Methods for Finance & 29 & 6\\
+% Advanced Derivatives & 30 & 6\\
+% Fixed Income (Advanced Methods) & 30 & 6\\ \\
+% English Language & 30 &	4\\
+% French Language & 31 &	4\\	
+% Internship & & 8\\		
+% Final Thesis & & 20\\	
+% & Total & 120\\\cline{2-3}
+% &\textsc{Gpa}&\textbf{8.0}
+% \end{tabular}
+% \end{center}
+% \bigskip
+% \hrule
+% \bigskip
+% 
+% %------------------------------------------------
+% 
+% \bigskip
+% 
+% \par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
+% 
+% \begin{center}
+% \begin{tabular}{lcc}
+% \multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade} & \textsc{Grade Points}\\ 
+% \hline
+% Corporate Financial Strategy & A & 4\\
+% Derivatives & A & 4\\
+% Money, Credit, and Banking & A & 4\\
+% Business Strategy & A- & 3.5\\
+% & &\\\cline{2-3}
+% & \textsc{Gpa} & \textbf{3.87599}
+% \end{tabular}
+% \end{center}
+% 
+% 
+% 
+% \newpage
+
+
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+
+% \section{References}
+% 
+% \bigskip
+% 
+% %\par{\centering\Large \hypertarget{grds}{Job References}\par}\large{\centering Contact\par}\normalsize
+% 
+% %\begin{center}
+% \begin{tabular}{rp{12cm}}
+% & \textbf{Prof. Dr. Andreas Hense}\vspace{0.13cm}\\
+% & \textit{Advisor for Bachelor and Master Thesis, lectuerer of several courses in Climatology and Statistics;} can discuss my education and work as a lecturer and advisor, familiar with my history at university\vspace{0.13cm}\\
+% \textsc{Address:} & Meteorologisches Institut der Universität Bonn\\
+% & Auf dem Hügel 20, 53121 Bonn\\
+% \textsc{Phone:} & +49 (0) 228 73518\\
+% \textsc{email:} & \href{mailto:ahense@uni-bonn.de}{ahense@uni-bonn.de}\\
+% \end{tabular}
+% \vspace{0.5cm}
+% 
+% \begin{tabular}{rp{12cm}}
+% & \textbf{Prof. Dr. Clemens Simmer}\vspace{0.13cm}\\
+% & \textit{Coordinator of student assistant position, lecturer of courses in Meteorology; familiar with my way of documentation and presentation of results}\vspace{0.13cm}\\
+% \textsc{Address:} & Meteorologisches Institut der Universität Bonn\\
+% & Auf dem Hügel 20, 53121 Bonn or\\
+% & Meckenheimer Allee 176, 53115 Bonn\\
+% \textsc{Phone:} & +49 (0) 228 73 - 5181 or - 60695\\
+% \textsc{email:} & \href{mailto:csimmer@uni-bonn.de}{csimmer@uni-bonn.de}\\
+% \end{tabular}
+% \vspace{0.5cm}
+% 
+% \begin{tabular}{rp{12cm}}
+% & \textbf{Dr. Prabhakar Shesthra}\vspace{0.13cm}\\
+% & \textit{Advisor of student assistant position; can speak to my ability to familiarize with a new field, and about my programming skills}\vspace{0.13cm}\\
+% \textsc{Address:} & Meteorologisches Institut der Universität Bonn\\
+% & Meckenheimer Allee 176, 53115 Bonn\\
+% \textsc{Phone:} & +49 (0) 228 73 60704\\
+% \textsc{email:} & \href{mailto:pshrestha@uni-bonn.de}{pshrestha@uni-bonn.de}\\
+% \end{tabular}
+% \vspace{0.5cm}
+% 
+% \begin{tabular}{rp{12cm}}
+% & \textbf{Dr. Matthieu Masbou}\vspace{0.13cm}\\
+% & \textit{Advisor of student assistant position; can assess my character and teamwork ability}\vspace{0.13cm}\\
+% \textsc{Address:} & Deutscher Wetterdienst \\
+% & Frankfurter Straße 135, 63067 Offenbach\\
+% \textsc{Phone:} & +49 (0) 69 8062 2034\\
+% \textsc{email:} & \href{mailto:matthieu.masbou@dwd.de}{matthieu.masbou@dwd.de}\\
+% \end{tabular}
+% \vspace{0.5cm}
+% 
+% \begin{tabular}{rp{12cm}}
+% & \textbf{Dr. Sabine Wurzler}\vspace{0.13cm}\\
+% & \textit{Mentor of internship; can speak about how I work on a project both in a team and self--dependent}\vspace{0.13cm}\\
+% \textsc{Address:} & Landesamt für Natur, Umwelt und Verbraucherschutz NRW (LANUV)\\
+% & Wallneyerstr. 6, 45133 Essen\\
+% & Fachbereichsleiterin\\
+% & Fachbereich 41 "Modellierung der Luftqualität, Anthropogene Veränderungen der Atmosphäre``\\
+% \textsc{Phone:} & +49 (0) 201 7995 - 1313\\
+% \textsc{email:} & \href{mailto:sabine.wurzler@lanuv.nrw.de}{sabine.wurzler@lanuv.nrw.de}\\
+% \end{tabular}
+%\end{center}
+
+
+%\bigskip
+%\hrule
+%\bigskip
+
+%------------------------------------------------
+
+\end{document}
